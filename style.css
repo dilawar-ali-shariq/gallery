@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+h1{
+    font-size: 2.2rem;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #E5E5E5;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main{
+    width: 50rem;
+    height: 60rem;
+    box-shadow: 0 0 0 0 gray,-0.2rem -0.2rem 1.5rem 0.5rem gray,0 2rem 2.5rem -0.8rem gray;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+#upper{
+    height: 20rem;
+    background-color: #00C0F0;
+    border-radius: 1rem 1rem 0 0;
+}
+
+#lower{
+    height: 40rem;
+    background-color: white;
+    color: #3A3947;
+    flex-flow: column;
+    border-radius: 0 0 1rem 1rem;
+}
+
+#add-list{
+    width: 30rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem gray;
+    padding: 1.5rem;
+    background-color: white;
+    margin: 0 1rem;
+}
+
+#input-add{
+    width: 27rem;
+    margin: 1rem 1rem 0.5rem 0;
+    padding: 0.2rem;
+    border: 0.1rem solid gray;
+    border-radius: 0.5rem;
+}
+
+.wrapper{
+    display: flex;
+}
+
+#upload-btn{
+    margin: 0.5rem 0;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: #3A3947;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#upload-btn:hover{
+    opacity: 0.7;
+}
+
+#loader{
+    display: none;
+    border: 0.4rem solid #f3f3f3;
+    border-top: 0.4rem solid #00C0F0; 
+    border-radius: 50%;
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: 0.6rem 1rem;
+    animation: spin 2s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    width: 30rem;
+    border-radius: 0.2rem;
+    height: 30rem;
+    border: 0.1rem solid gray;
+    overflow-y: scroll;
+    margin: 0 1rem;
+    flex-flow: column;
+}
+    
+.image{
+    width: 25rem;
+    margin: 1rem;
+    border-radius: 0.4rem;
+}
+
+#input-label{
+    display: none;
+    color: red;
+    padding: 0.5rem 0;
+}
+
+@media only screen and (max-width: 420px){
+    #add-list{
+        width: 25rem;
+    }
+
+    #input-add{
+        width: 22rem;
+    }
+
+    .list{
+        width: 25rem;
+    }
+
+    .image{
+        width: 22rem;
+    }
+}

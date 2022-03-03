@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-storage.js"></script>
+
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyAAV7NhL5iSoDq_0wE_9ZCcL9_TkVgS8_w",
+          authDomain: "gallery-83df5.firebaseapp.com",
+          projectId: "gallery-83df5",
+          storageBucket: "gallery-83df5.appspot.com",
+          messagingSenderId: "120370563761",
+          appId: "1:120370563761:web:c36335fc0fe0ae3f20f090"
+        };
+      
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+    <div id="container" class="flex">
+        <div id="main">
+            <div id="upper" class="flex">
+                <div id="add-list">
+                    <p><b>Select Image:</b></p>
+                    <input id="input-add" type="file" accept="image/*">
+                    <label id="input-label">Select an image*</label>
+                    <div class="wrapper">
+                        <button id="upload-btn"><p>Upload Image</p></button>
+                        <div id="loader"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="lower" class="flex">
+                <h1>MY GALLERY</h1>
+                <br>
+                <div class="list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
