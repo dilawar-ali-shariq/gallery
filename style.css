@@ -67,6 +67,7 @@ h1{
     padding: 0.2rem;
     border: 0.1rem solid gray;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .wrapper{

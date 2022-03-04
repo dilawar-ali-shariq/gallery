@@ -11,6 +11,7 @@ inputImage.addEventListener('change', (e) => {
 
 document.getElementById("upload-btn").addEventListener('click', (e) => {
   uploadImage();
+  fileData = ""
 })
 
 var uploadImage = async () => {
@@ -39,6 +40,9 @@ var uploadImage = async () => {
     console.log(error)
     document.getElementById("loader").style.display = "none"
     document.getElementById("input-label").style.display = "block"
+    setTimeout(() => {
+      document.getElementById("input-label").style.display = "none"
+    },3000);
   }
 }
 
